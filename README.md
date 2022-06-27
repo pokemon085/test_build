@@ -23,9 +23,11 @@ yarn lint
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-###測試佈署到github(windows)
-#1.建立sh檔案deploy.sh
+### 測試佈署到github(windows)
+
+## 1.建立sh檔案deploy.sh
 ```
+
 #!/usr/bin/env sh
 
 # 當發生錯誤時終止腳本運行
@@ -47,10 +49,12 @@ git push -f git@github.com:pokemon085/test_build.git master:gh-pages
 
 cd -
 ```
-
-#2.按右鍵git bash here
+## 2.按右鍵git bash here
 ```
 sh deploy.sh
 ```
+
+
+
 
 
