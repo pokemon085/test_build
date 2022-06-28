@@ -24,6 +24,7 @@ yarn lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## 測試佈署到github(windows)
+source => https://www.youtube.com/watch?v=i_XbW-FsLKk
 
 ### 1.建立sh檔案deploy.sh
 
@@ -49,9 +50,36 @@ git push -f git@github.com:pokemon085/test_build.git master:gh-pages
 
 cd -
 ```
-### 2.按右鍵git bash here
-```
+### 2.按右鍵git bash here 
 sh deploy.sh
+
+### 3.產生git key (自己的email)
+ ssh -keygen -t ed25519 -C "xxx@gmail.com" 
+
+ 會產生檔案的儲存路徑  
+ Your identification has been saved /xxx/xxx/xxx (id_rsa 自己用的)
+ Your public key has been saved /xxx/xxx/xxxx.pub (id_rsa.pub 外部系統用的)
+
+ ### 3.1 取得外部系統檔案內容
+ cat /xxx/xxx/xxxx.pub
+
+ ### 4. 把key貼到github 
+ 右邊頭像箭頭->
+ Settings->
+ 左邊SSH and GPG keys->
+ 進到頁面->
+ 按右邊New SSH key->
+ title隨便打 在Key欄位貼上 按下Add SSH key->
+ 完成設定
+
+ ### 5. 把 "deploy":"sh deploy.sh"貼到package.json裡的"scripts"裡面
+
+  ### 6. 按右鍵git bash here 
+  yarn deploy
+
+```
+
+
 
 
 
