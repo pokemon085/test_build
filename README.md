@@ -77,6 +77,8 @@ sh deploy.sh
   ### 6. 按右鍵git bash here 
   yarn deploy
 
+  ### 7.到github Settings裡面左邊點Pages,進去可以看到連結 Your site is published at "連結"
+
 ```
 
 
